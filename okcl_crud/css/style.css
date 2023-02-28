@@ -1,0 +1,132 @@
+
+html{
+    font-size: 100%;
+}body{
+    background: #f1f1f1;
+    font-family: sans-serif,arial,Helvetica;
+    margin: 0;
+}
+ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    
+}
+/* header styling */
+#header-admin{
+    background-color: #3A98B9;
+    padding: 15px 0;
+}
+#header-admin .logo{
+  color: #fff;
+}
+
+
+/* heading styling */
+#admin-content{
+    padding: 20px 0;
+    min-height: 800px;
+   
+}
+
+#admin-content .row{
+    display: flex;
+    margin: auto;
+    
+}
+
+#admin-content .admin-heading{
+    font-size: 35px;
+    margin: 0 0 15px;
+}
+/* add user and sort button styling */
+
+
+#admin-content .add-new{
+    background-color: #3A98B9;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 7px 10px;
+    /* margin: 0 0 20px; */
+    display: block;
+    transition: all 0.3s;
+    
+}
+#admin-content .add-new:hover{
+    text-shadow: 0 0 3px #000;
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+}
+
+/* login form styling */
+
+a,
+a:hover,
+a:focus{
+    text-decoration: none;
+    outline: none;
+}
+.btn:focus,
+button:focus{
+    outline: none;
+}
+
+
+/* register form styling */
+#admin-content  input[type="radio"]{
+    margin-left: 8px;
+}
+#admin-content  input[type="radio"]+label{
+    margin-left:4px;
+}
+
+
+
+/* table styling */
+
+
+#admin-content .table-responsive{
+    width: 100%;
+    padding: 0;
+    border:2px solid grey;
+   
+}
+
+#admin-content .table-responsive thead{
+    color: #fff;
+    background-color: #333;
+}
+
+#admin-content .table-responsive th{
+    padding: 10px;
+    border: 1px solid #fff;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#admin-content .table-responsive tbody{
+    color: #333;
+}
+
+#admin-content .table-responsive tbody tr{
+    background-color: #e7e7e7;
+}
+#admin-content .table-responsive tbody tr:nth-child(even){
+    
+    background-color: transparent;
+}
+
+#admin-content .table-responsive tbody td{
+    padding: 10px;
+    border: 1px solid #fff;
+    text-align: center;
+
+}
+
+#admin-content .table-responsive tbody td:nth-child(2){
+    text-align: left;
+}
+
