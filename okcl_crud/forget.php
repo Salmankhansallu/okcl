@@ -22,12 +22,12 @@
                           <!-- Form Start -->
                   <form id="forgetpassword" action="<?php $_SERVER['PHP_SELF']?>" method="POST">
                       <div class="form-group">
-                          <label>Email</label>
+                          <label>Email<span class="text-danger">*</span></label>
                           <input type="text" name="email" class="form-control" placeholder="" required>
 
                       </div>
                       <div class="form-group">
-                          <label>D.O.B.</label>
+                          <label>D.O.B.<span class="text-danger">*</span></label>
                           <input type="date" name="dob" class="form-control" placeholder="" required>
 
                       </div>
@@ -66,6 +66,9 @@
     }
 
 
+  ?>
+  <?php
+   include "footer.php"; 
   ?>
 </body>
 

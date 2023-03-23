@@ -39,11 +39,11 @@ if(isset($_SESSION['logindetailwrong'])){
                         <!-- Form Start -->
                         <form   action="<?php $_SERVER['PHP_SELF']; ?>" method ="POST">
                             <div class="form-group">
-                                <label>Email</label>
+                                <label>Email<span class="text-danger">*</span></label>
                                 <input type="text" name="email" class="form-control" placeholder="" required>
                             </div>
                             <div class="form-group">
-                                <label>Password</label>
+                                <label>Password<span class="text-danger">*</span></label>
                                 <input type="password" name="password" class="form-control" placeholder="" required>
                             </div>
                             <div class="form-group d-flex justify-content-start">
@@ -91,5 +91,8 @@ if(isset($_SESSION['logindetailwrong'])){
                 </div>
             </div>
         </div>
+        <?php
+        include "footer.php"; 
+        ?>
     </body>
 </html>

@@ -166,11 +166,11 @@
                   <td class='edit'><a href='update-user.php?id=<?php echo $row["user_id"].".".$pages; ?>' onClick='return updated()'><i class='fa fa-edit'></i> </a></td>
                   <?php
                       }
-                      else{
+                     
                   ?>
 
                   <?php
-                      } 
+                      
                   }
                     ?>
                               
@@ -243,7 +243,8 @@
 
             </script>
             <?php
-              }else {
+              }
+              else {
                 echo "<h3>No Results Found.</h3>";
               }
                 
@@ -294,4 +295,7 @@
   
   
 </div>
+<?php
+  include "footer.php"; 
+?>
  

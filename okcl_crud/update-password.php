@@ -21,12 +21,12 @@
                 <!-- Form Start -->
                 <form id="forgetpassword" action="<?php $_SERVER['PHP_SELF']?>" method="POST">
                     <div class="form-group">
-                        <label>Email</label>
+                        <label>Email<span class="text-danger">*</span></label>
                         <input type="text" name="email" class="form-control" placeholder="Email" required>
 
                     </div>
                     <div class="form-group">
-                        <label>Password</label>
+                        <label>Password<span class="text-danger">*</span></label>
                         <input type="password" name="password" class="form-control" placeholder="Password" required>
 
                     </div>
@@ -38,6 +38,9 @@
         </div>
     </div>
 </div>
+<?php
+    include "footer.php"; 
+?>
 <?php
     if(isset($_POST['reset'])){
         include "config.php";

@@ -10,8 +10,8 @@ if(isset($_SESSION['useralreadyregisteredmessage'])){
 if(isset($_POST['save'])){
     $adduser_by_admin_and_manager=$_GET['adduser_by_admin_and_manager'];
     if($adduser_by_admin_and_manager==true){
-    $_SESSION['adduser_by_admin_and_manager']='<div class="alert alert-success">Registered Sucessfully...!.</div>';
-}
+      $_SESSION['adduser_by_admin_and_manager']='<div class="alert alert-success">Registered Sucessfully...!.</div>';
+    }
     include "config.php";
     $fname =mysqli_real_escape_string($conn,$_POST['fname']);
     $mname =mysqli_real_escape_string($conn,$_POST['mname']);
@@ -76,7 +76,7 @@ if(isset($_POST['save'])){
                 <!-- Form Start -->
                 <form  action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" autocomplete="off">
                     <div class="form-group">
-                        <label>First Name</label>
+                        <label>First Name <span class="text-danger">*</span></label>
                         <input type="text" name="fname" class="form-control" placeholder="First Name" required>
                     </div>
                     <div class="form-group">
@@ -84,20 +84,20 @@ if(isset($_POST['save'])){
                         <input type="text" name="mname" class="form-control" placeholder="Middle Name">
                     </div>
                     <div class="form-group">
-                        <label>Last Name</label>
+                        <label>Last Name <span class="text-danger">*</span></label>
                         <input type="text" name="lname" class="form-control" placeholder="Last Name" required>
                     </div>
                     <div class="form-group">
-                        <label>D.O.B.</label>
+                        <label>D.O.B.<span class="text-danger">*</span></label>
                         <input type="date" name="dob" class="form-control"  required>
                     </div>
                     <div class="form-group">
-                        <label>Gender</label><br>
+                        <label>Gender<span class="text-danger">*</span></label><br>
                         <input type="radio" name="gender" value="male"   required><label >Male</label>
                         <input type="radio" name="gender"value="female"   required><label>Female</label>
                     </div>
                     <div class="form-group">
-                        <label>User Role</label>
+                        <label>User Role<span class="text-danger">*</span></label>
                         <select class="form-control" name="role" >
                             <option value="" >Select Option</option>
                             <option value="admin">Admin</option>
@@ -108,23 +108,23 @@ if(isset($_POST['save'])){
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Phone</label>
+                        <label>Phone<span class="text-danger">*</span></label>
                         <input type="text" name="phone" class="form-control" placeholder="Phone" min="10" max="10" required>
                     </div>
                     <div class="form-group">
-                        <label>Email</label>
+                        <label>Email<span class="text-danger">*</span></label>
                         <input type="text" name="email" class="form-control" placeholder="Email" required>
                     </div>
                     <div class="form-group">
-                        <label>Password</label>
+                        <label>Password<span class="text-danger">*</span></label>
                         <input type="password" name="password" class="form-control" placeholder="Password" required>
                     </div>
                     <div class="form-group">
-                        <label>City</label>
+                        <label>City<span class="text-danger">*</span></label>
                         <input type="text" name="address" class="form-control" placeholder="Address" required>
                     </div>
                     <div class="form-group">
-                        <label>Pin No.</label>
+                        <label>Pin No.<span class="text-danger">*</span></label>
                         <input type="text" name="pin" class="form-control" placeholder="pin" min=6 required>
                     </div>
                     <br>
@@ -145,3 +145,6 @@ if(isset($_POST['save'])){
         </div>
     </div>
 </div>
+<?php
+    include "footer.php"; 
+?>
